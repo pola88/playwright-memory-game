@@ -145,7 +145,7 @@ export const Game = () => {
         <SelectFurry value={currentFurryFriend} onChange={handleFurryChange} />
       </RestartBtnContainer>
       <div>
-        <RestartButton onClick={restartGame}>Restart</RestartButton>
+        <RestartButton data-testid="reset-btn" onClick={restartGame}>Restart</RestartButton>
       </div>
       
     </GameHeader>
