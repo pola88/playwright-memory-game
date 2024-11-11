@@ -1,6 +1,8 @@
-import styled from "styled-components"
+import styled, { DataAttributes } from "styled-components"
 
-export const Loading = styled.div`
+export const Loading = styled.div.attrs<DataAttributes>({
+  'data-testid': 'loading'
+})`
   width: 48px;
   height: 48px;
   border: 5px solid #FFF;

@@ -24,7 +24,10 @@ type CardProps = {
 }
 
 export const Card = ({flipped, image, onFlipped}: CardProps) => {
-  return <CardWrap onClick={() => !flipped && onFlipped()}>
+  return <CardWrap
+    data-testid={`card-${image.id}`}
+    onClick={() => !flipped && onFlipped()}
+  >
     <AspectRatioBox>
       <CardInner>
         { flipped && <img src={image.url} /> }

@@ -153,7 +153,7 @@ export const Game = () => {
       { isLoading && <LoadingContainer>
           <Loading />
         </LoadingContainer> }
-      <CardsContainer $isLoading={isLoading}>
+      <CardsContainer data-testid="cards-container" $isLoading={isLoading}>
           { cards.map((image, i) => (
             <Card
               flipped={!!flippedCards.find( flippedCard => flippedCard.cardId === i) || matchedCards.indexOf(image.id) !== -1 }
@@ -175,7 +175,7 @@ export const Game = () => {
       </Msg>
     </BodyGamer>
     <FooterGame>
-      <Counter>Counter: {counter}</Counter>
+      <Counter data-testid="counter">Counter: {counter}</Counter>
     </FooterGame>
   </GameContainer>
 }
